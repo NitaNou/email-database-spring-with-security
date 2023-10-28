@@ -5,6 +5,8 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
+import Prospects from '../views/Prospects.vue'
+import ProspectDetail from '../views/ProspectDetail.vue'
 
 Vue.use(Router)
 
@@ -51,6 +53,22 @@ const router = new Router({
       component: Register,
       meta: {
         requiresAuth: false
+      }
+    },
+    {
+      path: "/prospects",
+      name: "prospects",
+      component: Prospects,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/detail",
+      name: "detail",
+      component: ProspectDetail,
+      meta: {
+        requiresAuth: true
       }
     }
   ]
